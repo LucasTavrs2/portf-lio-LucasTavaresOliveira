@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Portfólio | Quem sou</title>
+</head>
+<body>
+
+    <!--[if lt IE 9]>
+    < src="<!--[if lt IE 9]>
+        < src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></>
+    <![endif]--> </>
+<![endif]-->
+    
+    <header>
+        <div>
+            <h4 id="cabecalho">
+                <a class="link-cabecalho1" href="index.html"> Quem sou  </a>
+                  |  <a class="link-cabecalho2" href="index2.html">  Minhas Skills </a> 
+                </h4>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <div  id="curiosidades"> <h4> <a id="transform-curiosidades" href="">Algumas curiosidades:</a></h4> </div>
+    <div id="lista-curiosidades">
+
+        <div   class="list-item"><button onclick="curiosidades('Lucas Tavares Oliveira')">Nome completo</button></div>
+        <div   class="list-item"><button onclick="curiosidades('06 de novembro de 2001')">Data de nascimento</button></div>
+        <div   class="list-item"><button onclick="curiosidades('Nova Iguaçu, RJ')">Onde moro</button></div>
+        <div   class="list-item"><button onclick="curiosidades('Miguel Pereira, RJ')">Onde nasci</button></div>
+        <div   class="list-item"><button onclick="curiosidades('Hamburguer com cheddar')">Comida favorita</button></div>
+        <div   class="list-item"><button onclick="curiosidades('Azul')">Cor favorita</button></div>
+        
+    </div> 
+        <div id="navegacao">
+          <div  >  
+            <div id="tela-curiosidades">
+                <input id="some-input" type="text" placeholder="Clique nas curiosidades acima " style="text-align: center;" disabled="disabled">
+            </div>
+            
+            <div id="div-imagem-principal">
+            <img id="imagem-principal" src="PC3.jpg" alt="">
+            </div>
+          </div>
+          <div id="os-gifs">  
+            <img id="gif2" src="Gif5.gif" alt="">
+
+            <img id="gif3" src="Gif3.gif" alt="">
+
+            <img id="gifG" src="Gif.gif" alt="">
+          </div>  
+        </div>
+    
+    <div>
+        <button onclick="botaoOff()" id="botao-off">
+
+        </button>
+    </div>
+
+    <div>
+        <button onclick="botaoOn()" id="botao-on">
+
+        </button>
+    </div>
+
+    
+    </nav>
+
+    <footer>
+        <div id="rodape">
+            <p id="contatos">Contatos:</p>
+          <p class="footer-itens"><a href="https://www.linkedin.com/in/lucas-tavares-3038901a5/">Linkedin</a></p>
+          <p class="footer-itens"><a href="https://www.instagram.com/lucastavrs2/?igshid=YmMyMTA2M2Y%3D">Instagram</a></p>
+          <p class="footer-itens"><a href="https://contate.me/lucas-tavares">Whatsapp</a></p>
+          <p class="footer-itens"><a href="https://t.me/Lucastavrs">Telegram</a></p>
+
+          <p id="outros-itens"> Outros: </p>
+          <p class="footer-itens"><a href="https://linktr.ee/LucasTavrs?utm_source=linktree_profile_share&ltsid=9d497005-e707-444d-b1f4-d7055f60e2df">Linktree</a></p>
+          <p class="footer-itens"><a href="https://github.com/LucasTavrs2">Github</a></p>
+
+
+          <div id="dataEHora">
+            <div>  
+            <img onclick="relogio()" id="img-relogio" src="img-relogio2.jpg"> 
+            <div id="conteudo-hora">
+                <div id="ajustar-conteudo-hora">
+             <input type="text" id="input-relogio" name="" disabled="disabled"> </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </footer>
+    <script>
+    function curiosidades(conteudo){
+        
+        const myInput = document.querySelector('#some-input')
+        myInput.value = conteudo
+        
+}
+    function botaoOn(){
+        document.getElementById('botao-on').style.backgroundColor = '#39ff14'
+        document.getElementById('some-input').style.backgroundColor = '#fff'
+        document.getElementById('botao-off').style.backgroundColor = '#ff0000'
+       
+    }
+
+    function botaoOff(){
+            document.getElementById('botao-on').style.backgroundColor = '#ff0000'
+            document.getElementById('botao-off').style.backgroundColor = '#fff'
+            document.getElementById('some-input').style.backgroundColor = '#000'
+
+            const myInput = document.querySelector('#some-input')
+            myInput.value = ''
+
+    }
+
+    function relogio(){
+        var hoje = new Date()
+        var horaAgora = hoje.getHours()
+        var minutosAgora = hoje.getMinutes()
+        var dataAgora = hoje.getDate()
+        var mesAgora = hoje.getMonth()
+        var anoAgora = hoje.getFullYear()
+
+
+        if (horaAgora > 18 || horaAgora < 5) {
+           var saudacao = 'Boa noite!'
+        } else if(horaAgora > 12){
+           var saudacao = 'Boa tarde!'
+        } else{
+           var saudacao = 'Bom dia!'
+        }
+        
+        
+       
+        
+        var dataCompleta = ( saudacao + '    ' + horaAgora + 'h:' + minutosAgora + 'm    ' + dataAgora + '/' + (mesAgora + 1) + '/' + anoAgora)
+        console.log(dataCompleta)
+        const mudarData = document.querySelector('#input-relogio')
+        mudarData.value = dataCompleta
+
+        document.getElementById('ajustar-conteudo-hora').style = ('border: 1px solid #964b00;')
+    }
+
+    
+    </script>
+</body>
+</html>
