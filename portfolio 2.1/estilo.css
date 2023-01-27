@@ -5,6 +5,7 @@ body{
     margin: 0;
     background: url(back2.jpg);
     font-family: Helvética, sans-serif;
+    min-width: 1200px;
 }
 
 #cabecalho{
