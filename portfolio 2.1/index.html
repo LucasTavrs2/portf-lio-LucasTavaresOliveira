@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>teste pag 1</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h4 id="cabecalho">
+                <a class="link-cabecalho1" href="index.html"> Quem sou  </a>
+                  |  <a class="link-cabecalho2" href="index2.html">  Minhas Skills </a> 
+                </h4>
+        </div>
+    </header>
+
+        <nav>
+            <div id="global">
+                <div id="tela-pc">
+                    <div id="botoes-curiosidades">
+                        <button onclick="curiosidades('Lucas Tavares Oliveira')">Nome completo</button>
+                        <button onclick="curiosidades('06 de novembro de 2001')">Data de nascimento</button>
+                        <button onclick="curiosidades('Nova Iguaçu, RJ')">Onde moro</button>
+                        <button onclick="curiosidades('Miguel Pereira, RJ')">Onde nasci</button>
+                        <button onclick="curiosidades('Hamburguer com cheddar')">Comida favorita</button>
+                        <button onclick="curiosidades('Azul')">Cor favorita</button>
+                    </div>
+                    <div id="tela-input-pc">
+                        <input id="some-input" type="text" placeholder=" " style="text-align: center;" disabled="disabled">
+                    </div>
+                    <div class="botoes-on-off">
+                        <button onclick="botaoOff()" id="btn-1"></button>
+                        <button onclick="botaoOn()" id="btn-2"></button>
+                    </div>
+                </div>
+                <div id="gifs">
+                    <div id="conteudo-gif">
+                        <img src="Gif5.gif">
+                        <img src="Gif3.gif">
+                        <img id="gif-3" src="Gif.gif">         
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <footer>
+        <div id="footer-geral">
+            <div id="rodape-geral">
+                  <p id="contatos">Contatos:</p>
+                  <p class="footer-itens"><a href="https://www.linkedin.com/in/lucas-tavares-3038901a5/">Linkedin</a></p>
+                  <p class="footer-itens"><a href="https://www.instagram.com/lucastavrs2/?igshid=YmMyMTA2M2Y%3D">Instagram</a></p>
+                  <p class="footer-itens"><a href="https://contate.me/lucas-tavares">Whatsapp</a></p>
+                  <p class="footer-itens"><a href="https://t.me/Lucastavrs">Telegram</a></p>
+
+                  <p id="outros-itens"> Outros: </p>
+                  <p class="footer-itens"><a href="https://linktr.ee/LucasTavrs?utm_source=linktree_profile_share&ltsid=9d497005-e707-444d-b1f4-d7055f60e2df">Linktree</a></p>
+                  <p class="footer-itens"><a href="https://github.com/LucasTavrs2">Github</a></p>
+
+                  <div id="img-do-relogio">
+                    <img onclick="relogio()" src="img-relogio2.jpg">
+                </div>
+                <div id="input-hora">
+                    <input type="text" id="input-relogio" name="" disabled="disabled"> </div>
+                </div>
+            </div>
+            
+                
+            
+        </div>  
+    </footer>
+    <script type="text/javascript">
+        function curiosidades(conteudo){
+        
+        const myInput = document.querySelector('#some-input')
+        myInput.value = conteudo
+        
+}
+
+    function botaoOn(){
+        const myInput = document.querySelector('#some-input')
+        myInput.value = "Clique nas curiosidades acima"
+
+        document.getElementById('btn-2').style.backgroundColor = '#008000'
+        document.getElementById('btn-1').style.backgroundColor = '#ff0000'
+    }
+
+    function botaoOff(){
+        const myInput = document.querySelector('#some-input')
+        myInput.value = " "
+
+        document.getElementById('btn-1').style.backgroundColor = '#fff'
+        document.getElementById('btn-2').style.backgroundColor = '#ff0000'
+    }
+
+    function relogio(){
+        var hoje = new Date()
+        var horaAgora = hoje.getHours()
+        var minutosAgora = hoje.getMinutes()
+        var dataAgora = hoje.getDate()
+        var mesAgora = hoje.getMonth()
+        var anoAgora = hoje.getFullYear()
+
+
+        if (horaAgora > 18 || horaAgora < 5) {
+           var saudacao = 'Boa noite!'
+        } else if(horaAgora > 12){
+           var saudacao = 'Boa tarde!'
+        } else{
+           var saudacao = 'Bom dia!'
+        }
+        
+        
+       
+        
+        var dataCompleta = ( saudacao + '    ' + horaAgora + 'h:' + minutosAgora + 'm    ' + dataAgora + '/' + (mesAgora + 1) + '/' + anoAgora)
+        console.log(dataCompleta)
+        var mudarData = document.querySelector('#input-relogio')
+        mudarData.value = dataCompleta
+
+        
+    }
+    </script>
+</body>
+</html>
