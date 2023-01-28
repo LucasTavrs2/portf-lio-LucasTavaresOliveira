@@ -60,7 +60,6 @@ body{
 }
 
 #tela-pc{
-    border: 1px solid red;
     width: 48%;
     height: 65vh;
     margin: 1% auto 1% auto;
@@ -75,7 +74,6 @@ body{
 #botoes-curiosidades{
     margin: 2% 4% 0 4% ;
     width: 91%;
-    border: 1px solid purple;
 }
 
 #botoes-curiosidades button{
@@ -100,8 +98,7 @@ body{
 #tela-input-pc{
     width: 68.7%;
     height: 33.9vh;
-    margin: 0 1% 5% 16%;
-    border: 1px solid red;
+    margin: 0 1% 6.5% 16%;
 }
 
 #tela-input-pc input{
@@ -120,7 +117,6 @@ body{
     width: 83.2%;
     height: 7%;
     margin: 0 1% 1% 1%;
-    border: 3px solid yellow;
 }
 .botoes-on-off button{
     width: 20%;
@@ -133,7 +129,6 @@ body{
 #ordenar-botoes{
     width: 20%;
     height: 80%;
-    border: 2px solid black;
     display: flex;
     margin: 1% 0 1% auto;
 }
