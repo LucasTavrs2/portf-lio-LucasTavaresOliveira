@@ -161,19 +161,17 @@ body{
 }
 
 #conteudo-gif{
-    margin: auto 1% auto 3%;
+    margin: auto auto auto auto;
     align-items: center;
+    width: 100%;
 }
 
 #conteudo-gif img{
     width: 25%;
     margin: 1% 3.5%;
+    height: 22vh;
     border-radius: 45px;
     border: 1px solid #964b00;
-}
-
-#gif-3{
-    height: 10.2em;
 }
 
  /* ------------------------------------------------------------  PÁGINA 2* --------------------------------------------------------------------*/
@@ -257,7 +255,7 @@ body{
 }
 
 #botoes button{
-    margin: 0 1em 0 1em;
+    margin: 0 2.3% 0 2.2%;
     width: 2.5%;
     padding: 0.5em;
     border-radius: 45px;
@@ -369,7 +367,6 @@ footer{
 }
 
 #img-do-relogio{
-    
     width: 5%;
     margin: auto 0 auto 5%;
 }
@@ -383,20 +380,19 @@ footer{
 }
 
 #input-hora{
-    border: 1px solid black;
     margin: 0.5% 0 0 0;
-    width: 20%;
+    width: 23%;
     height: 1.6em;
     border-radius: 45px;
-    border: 0 solid #c3a06e;
+    border: 3px solid #c3a06e;
 
 }
 
 #input-hora input{
-    margin: 1% auto auto 2.5%;
+    margin: 1.3% auto auto 2.5%;
     width: 92%;
     height: 1.2em;
     background: #c3a06e;
-    border: 0 solid #c3a06e;
+    border: 1px solid #c3a06e;
     color: #f5f5f5;
 }
