@@ -21,7 +21,7 @@
                 <div id="tela-pc">
                     <div id="botoes-curiosidades">
                         <button onclick="curiosidades('Lucas Tavares Oliveira')">Nome completo</button>
-                        <button onclick="curiosidades('06 de novembro de 2001')">Data de nascimento</button>
+                        <button onclick="curiosidades('06 de novembro de 2001')">Quando nasci</button>
                         <button onclick="curiosidades('Nova Iguaçu, RJ')">Onde <br> moro</button>
                         <button onclick="curiosidades('Miguel Pereira, RJ')">Onde <br> nasci</button>
                         <button onclick="curiosidades('Hamburguer com cheddar')">Comida favorita</button>
@@ -121,6 +121,7 @@
         var mudarData = document.querySelector('#input-relogio')
         mudarData.value = dataCompleta
 
+        document.getElementById('input-hora').style.border = (' 3px solid #964b00')
         
     }
     </script>
